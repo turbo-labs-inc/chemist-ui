@@ -1,0 +1,34 @@
+---
+title: AutoComplete
+description: Autocomplete input with suggestions.
+---
+
+# AutoComplete
+
+Input field with autocomplete suggestions.
+
+## Basic Usage
+
+```tsx
+import { AutoComplete } from 'antd';
+
+const options = [
+  { value: 'Option 1' },
+  { value: 'Option 2' },
+  { value: 'Option 3' },
+];
+
+export default function AutoCompleteExample() {
+  return (
+    <AutoComplete
+      options={options}
+      placeholder="Type to search"
+      style={{ width: 200 }}
+    />
+  );
+}
+```
+
+## Resources
+
+- [Ant Design AutoComplete](https://ant.design/components/auto-complete)

@@ -1,0 +1,31 @@
+---
+title: Select
+description: Dropdown select component.
+---
+
+# Select
+
+Dropdown selection component.
+
+## Basic Usage
+
+```tsx
+import { Select, MenuItem, FormControl, InputLabel } from '@mui/material';
+
+export default function SelectExample() {
+  return (
+    <FormControl fullWidth>
+      <InputLabel>Age</InputLabel>
+      <Select defaultValue={10} label="Age">
+        <MenuItem value={10}>Ten</MenuItem>
+        <MenuItem value={20}>Twenty</MenuItem>
+        <MenuItem value={30}>Thirty</MenuItem>
+      </Select>
+    </FormControl>
+  );
+}
+```
+
+## Resources
+
+- [MUI Select](https://mui.com/material-ui/react-select/)

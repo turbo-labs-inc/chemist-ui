@@ -1,0 +1,33 @@
+---
+title: Message
+description: Display global messages at the top of the page.
+---
+
+# Message
+
+Global message feedback at the top.
+
+## Basic Usage
+
+```tsx
+import { Button, message } from 'antd';
+
+export default function MessageExample() {
+  const [messageApi, contextHolder] = message.useMessage();
+
+  const info = () => {
+    messageApi.info('This is a normal message');
+  };
+
+  return (
+    <>
+      {contextHolder}
+      <Button onClick={info}>Display Message</Button>
+    </>
+  );
+}
+```
+
+## Resources
+
+- [Ant Design Message](https://ant.design/components/message)

@@ -1,0 +1,33 @@
+---
+title: Result
+description: Display result of operation with status.
+---
+
+# Result
+
+Display operation results.
+
+## Basic Usage
+
+```tsx
+import { Result, Button } from 'antd';
+
+export default function ResultExample() {
+  return (
+    <Result
+      status="success"
+      title="Successfully Purchased Cloud Server!"
+      subTitle="Order number: 2017182818828182881"
+      extra={[
+        <Button type="primary" key="console">
+          Go Console
+        </Button>,
+      ]}
+    />
+  );
+}
+```
+
+## Resources
+
+- [Ant Design Result](https://ant.design/components/result)

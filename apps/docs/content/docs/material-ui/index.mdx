@@ -1,0 +1,113 @@
+---
+title: Material UI Components
+description: Google's Material Design implemented in React with 59+ comprehensive components
+---
+
+# Material UI Components
+
+Material UI (MUI) is a comprehensive React component library implementing Google's Material Design. Chemist UI provides seamless theming for all MUI components.
+
+## Component Categories
+
+### Inputs
+User input and form components.
+- [Autocomplete](/docs/material-ui/inputs/autocomplete)
+- [Button](/docs/material-ui/inputs/button)
+- [Button Group](/docs/material-ui/inputs/button-group)
+- [Checkbox](/docs/material-ui/inputs/checkbox)
+- [Floating Action Button](/docs/material-ui/inputs/fab)
+- [Radio Group](/docs/material-ui/inputs/radio-group)
+- [Rating](/docs/material-ui/inputs/rating)
+- [Select](/docs/material-ui/inputs/select)
+- [Slider](/docs/material-ui/inputs/slider)
+- [Switch](/docs/material-ui/inputs/switch)
+- [Text Field](/docs/material-ui/inputs/text-field)
+- [Toggle Button](/docs/material-ui/inputs/toggle-button)
+- [Transfer List](/docs/material-ui/inputs/transfer-list)
+
+### Data Display
+Components for presenting information.
+- [Avatar](/docs/material-ui/data-display/avatar)
+- [Badge](/docs/material-ui/data-display/badge)
+- [Chip](/docs/material-ui/data-display/chip)
+- [Divider](/docs/material-ui/data-display/divider)
+- [Icons](/docs/material-ui/data-display/icons)
+- [List](/docs/material-ui/data-display/list)
+- [Table](/docs/material-ui/data-display/table)
+- [Tooltip](/docs/material-ui/data-display/tooltip)
+- [Typography](/docs/material-ui/data-display/typography)
+
+### Feedback
+User feedback and status components.
+- [Alert](/docs/material-ui/feedback/alert)
+- [Backdrop](/docs/material-ui/feedback/backdrop)
+- [Dialog](/docs/material-ui/feedback/dialog)
+- [Progress](/docs/material-ui/feedback/progress)
+- [Skeleton](/docs/material-ui/feedback/skeleton)
+- [Snackbar](/docs/material-ui/feedback/snackbar)
+
+### Surfaces
+Container and surface components.
+- [Accordion](/docs/material-ui/surfaces/accordion)
+- [App Bar](/docs/material-ui/surfaces/app-bar)
+- [Card](/docs/material-ui/surfaces/card)
+- [Paper](/docs/material-ui/surfaces/paper)
+
+### Navigation
+Navigation and routing components.
+- [Bottom Navigation](/docs/material-ui/navigation/bottom-navigation)
+- [Breadcrumbs](/docs/material-ui/navigation/breadcrumbs)
+- [Drawer](/docs/material-ui/navigation/drawer)
+- [Link](/docs/material-ui/navigation/link)
+- [Menu](/docs/material-ui/navigation/menu)
+- [Pagination](/docs/material-ui/navigation/pagination)
+- [Speed Dial](/docs/material-ui/navigation/speed-dial)
+- [Stepper](/docs/material-ui/navigation/stepper)
+- [Tabs](/docs/material-ui/navigation/tabs)
+
+### Layout
+Layout and spacing utilities.
+- [Box](/docs/material-ui/layout/box)
+- [Container](/docs/material-ui/layout/container)
+- [Grid](/docs/material-ui/layout/grid)
+- [Stack](/docs/material-ui/layout/stack)
+- [Image List](/docs/material-ui/layout/image-list)
+
+### Lab
+Experimental components.
+- [Timeline](/docs/material-ui/lab/timeline)
+- [Tree View](/docs/material-ui/lab/tree-view)
+- [Masonry](/docs/material-ui/lab/masonry)
+
+### Utils
+Utility components.
+- [Click Away Listener](/docs/material-ui/utils/click-away-listener)
+- [CSS Baseline](/docs/material-ui/utils/css-baseline)
+- [Modal](/docs/material-ui/utils/modal)
+- [No SSR](/docs/material-ui/utils/no-ssr)
+- [Popover](/docs/material-ui/utils/popover)
+- [Popper](/docs/material-ui/utils/popper)
+- [Portal](/docs/material-ui/utils/portal)
+- [Textarea Autosize](/docs/material-ui/utils/textarea-autosize)
+- [Transitions](/docs/material-ui/utils/transitions)
+
+## Installation
+
+```bash
+pnpm add @chemist-ui/core @chemist-ui/react @mui/material @emotion/react @emotion/styled
+```
+
+## Usage
+
+```tsx
+import { ChemistProvider, materialUiTheme } from '@chemist-ui/react';
+import { Button } from '@mui/material';
+
+function App() {
+  return (
+    <ChemistProvider designSystem="material-ui" theme={materialUiTheme}>
+      <Button variant="contained">Themed Button</Button>
+    </ChemistProvider>
+  );
+}
+```

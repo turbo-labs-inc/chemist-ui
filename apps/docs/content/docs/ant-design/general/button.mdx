@@ -1,0 +1,156 @@
+---
+title: Button
+description: A button is used to trigger an action or event, such as submitting a form or displaying a dialog.
+---
+
+import { Button, Space } from 'antd';
+
+Buttons allow users to take actions with a single tap or click.
+
+## Installation
+
+```bash
+pnpm add @chemist-ui/core @chemist-ui/react antd
+```
+
+## Basic Usage
+
+<ComponentPreview
+  code={`import { Button } from 'antd';
+
+export default function ButtonExample() {
+  return (
+    <Button type="primary">
+      Primary Button
+    </Button>
+  );
+}`}
+>
+  <Button type="primary">Primary Button</Button>
+</ComponentPreview>
+
+## Variants
+
+### Button Types
+
+Ant Design provides multiple button variants for different use cases:
+
+<ComponentPreview
+  code={`import { Button, Space } from 'antd';
+
+export default function ButtonTypes() {
+  return (
+    <Space>
+      <Button type="primary">Primary</Button>
+      <Button>Default</Button>
+      <Button type="dashed">Dashed</Button>
+      <Button type="text">Text</Button>
+      <Button type="link">Link</Button>
+    </Space>
+  );
+}`}
+>
+  <Space>
+    <Button type="primary">Primary</Button>
+    <Button>Default</Button>
+    <Button type="dashed">Dashed</Button>
+    <Button type="text">Text</Button>
+    <Button type="link">Link</Button>
+  </Space>
+</ComponentPreview>
+
+### Sizes
+
+Buttons come in three sizes:
+
+<ComponentPreview
+  code={`import { Button, Space } from 'antd';
+
+export default function ButtonSizes() {
+  return (
+    <Space>
+      <Button size="large">Large</Button>
+      <Button size="middle">Middle</Button>
+      <Button size="small">Small</Button>
+    </Space>
+  );
+}`}
+>
+  <Space>
+    <Button size="large">Large</Button>
+    <Button size="middle">Middle</Button>
+    <Button size="small">Small</Button>
+  </Space>
+</ComponentPreview>
+
+### States
+
+Buttons support loading, disabled, and danger states:
+
+<ComponentPreview
+  code={`import { Button, Space } from 'antd';
+
+export default function ButtonStates() {
+  return (
+    <Space direction="vertical">
+      <Button type="primary" loading>
+        Loading
+      </Button>
+      <Button type="primary" disabled>
+        Disabled
+      </Button>
+      <Button type="primary" danger>
+        Danger
+      </Button>
+    </Space>
+  );
+}`}
+>
+  <Space direction="vertical">
+    <Button type="primary" loading>
+      Loading
+    </Button>
+    <Button type="primary" disabled>
+      Disabled
+    </Button>
+    <Button type="primary" danger>
+      Danger
+    </Button>
+  </Space>
+</ComponentPreview>
+
+## API Reference
+
+### Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `type` | `primary \| default \| dashed \| text \| link` | `default` | Button type |
+| `size` | `large \| middle \| small` | `middle` | Button size |
+| `disabled` | `boolean` | `false` | Disabled state |
+| `loading` | `boolean \| { delay: number }` | `false` | Loading state |
+| `danger` | `boolean` | `false` | Danger state |
+| `block` | `boolean` | `false` | Full width button |
+| `ghost` | `boolean` | `false` | Ghost style (transparent background) |
+| `shape` | `default \| circle \| round` | `default` | Button shape |
+| `icon` | `ReactNode` | - | Icon element |
+| `onClick` | `(event) => void` | - | Click handler |
+| `htmlType` | `button \| submit \| reset` | `button` | Native button type |
+
+## Accessibility
+
+- Supports keyboard navigation (Enter/Space to activate)
+- Proper ARIA attributes automatically applied
+- Focus indicators meet WCAG 2.1 standards
+- Disabled buttons are not keyboard focusable
+
+## Related Components
+
+- [Icon](/docs/ant-design/general/icon)
+- [Dropdown](/docs/ant-design/navigation/dropdown)
+- [FloatButton](/docs/ant-design/other/floatbutton)
+
+## Resources
+
+- [Ant Design Button Docs](https://ant.design/components/button)
+- [Button Design Guidelines](https://ant.design/components/button#design-guidelines)

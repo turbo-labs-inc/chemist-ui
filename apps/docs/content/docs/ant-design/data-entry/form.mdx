@@ -1,0 +1,33 @@
+---
+title: Form
+description: High-performance form component with data validation.
+---
+
+# Form
+
+Form component for collecting and validating user input.
+
+## Basic Usage
+
+```tsx
+import { Form, Input, Button } from 'antd';
+
+export default function FormExample() {
+  return (
+    <Form layout="vertical">
+      <Form.Item label="Username" name="username">
+        <Input />
+      </Form.Item>
+      <Form.Item>
+        <Button type="primary" htmlType="submit">
+          Submit
+        </Button>
+      </Form.Item>
+    </Form>
+  );
+}
+```
+
+## Resources
+
+- [Ant Design Form](https://ant.design/components/form)

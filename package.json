@@ -1,0 +1,24 @@
+{
+  "name": "chemist-ui",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Chemist UI monorepo",
+  "license": "MIT",
+  "packageManager": "pnpm@9.10.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "turbo run dev",
+    "dev:docs": "turbo run dev --filter @chemist-ui/docs",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "typecheck": "turbo run typecheck"
+  },
+  "devDependencies": {
+    "@types/node": "^24.6.2",
+    "turbo": "^2.1.1",
+    "typescript": "^5.9.3"
+  }
+}

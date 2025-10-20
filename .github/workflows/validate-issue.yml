@@ -1,0 +1,86 @@
+name: Validate Bug Report
+
+on:
+  issues:
+    types:
+      - opened
+
+jobs:
+  validate-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check for reproduction link
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const excludeLinks = [
+              'https://github.com/chemist-ui/',
+              'https://stackblitz.com/edit/chemist-ui-starter'
+            ];
+
+            const reproductionKeywords = [
+              'stackblitz.com',
+              'github.com'
+            ];
+
+            // Helper function to get the base URL without query parameters or fragments
+            function getBaseUrl(url) {
+              try {
+                const parsedUrl = new URL(url);
+                return `${parsedUrl.origin}${parsedUrl.pathname}`;
+              } catch {
+                return url;
+              }
+            }
+
+            const issueBody = context.payload.issue.body || '';
+            const issueBodyLower = issueBody.toLowerCase();
+
+            // Extract base URLs for comparison
+            const issueLinks = issueBodyLower.match(/https?:\/\/[^\s)]+/g) || [];
+            const issueBaseLinks = issueLinks.map(getBaseUrl);
+
+            // Extract base URLs from excluded links
+            const excludedBaseLinks = excludeLinks.map(link => getBaseUrl(link).toLowerCase());
+            
+            // Check if the issue contains any of the excluded links only
+            const hasOnlyExcludedLinks = issueBaseLinks.every(link =>
+              excludedBaseLinks.includes(link)
+            );
+
+            // Check if there's a valid reproduction link
+            const hasReproduction = reproductionKeywords.some(keyword =>
+              issueBaseLinks.some(link => link.includes(keyword))
+            );
+
+            console.log('hasReproduction: ', hasReproduction);
+            console.log('hasOnlyExcludedLinks: ', hasOnlyExcludedLinks);
+
+            if (!hasReproduction || hasOnlyExcludedLinks) {
+              const issueNumber = context.payload.issue.number;
+              const commentBody = `👋 Hi, thanks for opening this issue! We couldn’t find a reproduction link.\n\nPlease update your issue with one of the following:\n- **StackBlitz template**: [Chemist UI React starter](https://stackblitz.com/edit/chemist-ui-starter)\n- **GitHub repo link**: A public repository that demonstrates the bug.\n\nIssues without reproductions are automatically closed. See the [contribution guide](https://github.com/chemist-ui/chemist-ui/blob/main/contributing.md#issue-process) for details.\n\nFeel free to reopen once a reproduction is added. For usage questions, start a thread in [GitHub Discussions](https://github.com/chemist-ui/chemist-ui/discussions).`;
+
+              // Post the comment
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issueNumber,
+                body: commentBody
+              });
+
+              // Add a 'needs reproduction' label
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issueNumber,
+                labels: ['needs reproduction']
+              });
+
+              // Close the issue
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issueNumber,
+                state: 'closed'
+              });
+            }

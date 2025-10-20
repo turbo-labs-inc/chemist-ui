@@ -1,0 +1,27 @@
+---
+title: Descriptions
+description: Display key-value pairs in a structured format.
+---
+
+# Descriptions
+
+Display groups of read-only fields.
+
+## Basic Usage
+
+```tsx
+import { Descriptions } from 'antd';
+
+const items = [
+  { key: '1', label: 'UserName', children: 'Zhou Maomao' },
+  { key: '2', label: 'Telephone', children: '1810000000' },
+];
+
+export default function DescriptionsExample() {
+  return <Descriptions title="User Info" items={items} />;
+}
+```
+
+## Resources
+
+- [Ant Design Descriptions](https://ant.design/components/descriptions)

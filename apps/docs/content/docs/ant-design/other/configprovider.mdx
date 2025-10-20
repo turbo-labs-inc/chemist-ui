@@ -1,0 +1,29 @@
+---
+title: ConfigProvider
+description: Configure global settings for all components.
+---
+
+# ConfigProvider
+
+Global configuration for all Ant Design components.
+
+## Basic Usage
+
+```tsx
+import { ConfigProvider, Button } from 'antd';
+import { antDesignTheme, getAntdTheme } from '@chemist-ui/react';
+
+export default function ConfigProviderExample() {
+  return (
+    <ConfigProvider theme={getAntdTheme(antDesignTheme)}>
+      <Button type="primary">Themed Button</Button>
+    </ConfigProvider>
+  );
+}
+```
+
+> `ChemistProvider` already wraps your tree with `ConfigProvider`. Reach for `getAntdTheme` when you need to merge additional overrides or introduce nested providers for specific sections.
+
+## Resources
+
+- [Ant Design ConfigProvider](https://ant.design/components/config-provider)

@@ -1,0 +1,31 @@
+---
+title: Steps
+description: Display progress through a sequence of logical steps.
+---
+
+# Steps
+
+Guide users through a task by showing progress in a series of steps.
+
+## Basic Usage
+
+```tsx
+import { Steps } from 'antd';
+
+export default function StepsExample() {
+  return (
+    <Steps
+      current={1}
+      items={[
+        { title: 'Finished', description: 'This is a description' },
+        { title: 'In Progress', description: 'This is a description' },
+        { title: 'Waiting', description: 'This is a description' },
+      ]}
+    />
+  );
+}
+```
+
+## Resources
+
+- [Ant Design Steps](https://ant.design/components/steps)

@@ -1,0 +1,58 @@
+---
+title: Grid
+description: A 24-column grid system for creating flexible layouts.
+---
+
+# Grid
+
+Ant Design's grid system uses Row and Col components for responsive layouts.
+
+## Installation
+
+```bash
+pnpm add @chemist-ui/core @chemist-ui/react antd
+```
+
+## Basic Usage
+
+```tsx
+import { Row, Col } from 'antd';
+
+export default function GridExample() {
+  return (
+    <Row>
+      <Col span={12}>col-12</Col>
+      <Col span={12}>col-12</Col>
+    </Row>
+  );
+}
+```
+
+## Responsive Layout
+
+```tsx
+import { Row, Col } from 'antd';
+
+export default function ResponsiveGrid() {
+  return (
+    <Row>
+      <Col xs={24} sm={12} md={8} lg={6}>
+        Responsive Column
+      </Col>
+      <Col xs={24} sm={12} md={8} lg={6}>
+        Responsive Column
+      </Col>
+      <Col xs={24} sm={12} md={8} lg={6}>
+        Responsive Column
+      </Col>
+      <Col xs={24} sm={12} md={8} lg={6}>
+        Responsive Column
+      </Col>
+    </Row>
+  );
+}
+```
+
+## Resources
+
+- [Ant Design Grid](https://ant.design/components/grid)

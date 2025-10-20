@@ -1,0 +1,29 @@
+---
+title: Autocomplete
+description: Enhanced text input with suggested completions.
+---
+
+# Autocomplete
+
+Autocomplete input with suggestions from a list.
+
+## Basic Usage
+
+```tsx
+import { Autocomplete, TextField } from '@mui/material';
+
+const options = ['Option 1', 'Option 2', 'Option 3'];
+
+export default function AutocompleteExample() {
+  return (
+    <Autocomplete
+      options={options}
+      renderInput={(params) => <TextField {...params} label="Select option" />}
+    />
+  );
+}
+```
+
+## Resources
+
+- [MUI Autocomplete](https://mui.com/material-ui/react-autocomplete/)

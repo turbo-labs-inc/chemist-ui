@@ -1,0 +1,28 @@
+---
+title: Popover
+description: Display floating card popped by hovering or clicking.
+---
+
+# Popover
+
+Display content in a popover overlay.
+
+## Basic Usage
+
+```tsx
+import { Popover, Button } from 'antd';
+
+const content = <div>Content here</div>;
+
+export default function PopoverExample() {
+  return (
+    <Popover content={content} title="Title">
+      <Button>Hover me</Button>
+    </Popover>
+  );
+}
+```
+
+## Resources
+
+- [Ant Design Popover](https://ant.design/components/popover)

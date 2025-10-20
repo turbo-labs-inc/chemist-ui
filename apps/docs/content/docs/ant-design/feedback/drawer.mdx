@@ -1,0 +1,32 @@
+---
+title: Drawer
+description: Slide-out panel from the edge of the screen.
+---
+
+# Drawer
+
+Panel that slides in from edge of screen.
+
+## Basic Usage
+
+```tsx
+import { Drawer, Button } from 'antd';
+import { useState } from 'react';
+
+export default function DrawerExample() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <>
+      <Button onClick={() => setOpen(true)}>Open</Button>
+      <Drawer title="Drawer" onClose={() => setOpen(false)} open={open}>
+        <p>Content here</p>
+      </Drawer>
+    </>
+  );
+}
+```
+
+## Resources
+
+- [Ant Design Drawer](https://ant.design/components/drawer)

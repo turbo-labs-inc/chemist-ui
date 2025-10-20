@@ -1,0 +1,30 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "ignorePaths": [
+    "node_modules/*",
+    "dist/*",
+    "types.d.ts",
+    "coverage/*",
+    "**.js",
+    "**.snap",
+    "**LICENSE",
+    "**/package.json",
+    "**/renovate.json"
+  ],
+  "dictionaries": ["tailwind", "project", "react-native"],
+  "dictionaryDefinitions": [
+    {
+      "name": "tailwind",
+      "path": "./.cspell/tailwind.txt"
+    },
+    {
+      "name": "project",
+      "path": "./.cspell/project.txt"
+    },
+    {
+      "name": "react-native",
+      "path": "./.cspell/react-native.txt"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+---
+title: Dropdown
+description: A dropdown list triggered by a button or other element.
+---
+
+# Dropdown
+
+Display a contextual menu when clicked.
+
+## Basic Usage
+
+```tsx
+import { Dropdown, Button, Space } from 'antd';
+
+const items = [
+  { key: '1', label: 'Menu Item 1' },
+  { key: '2', label: 'Menu Item 2' },
+  { key: '3', label: 'Menu Item 3' },
+];
+
+export default function DropdownExample() {
+  return (
+    <Dropdown menu={{ items }}>
+      <Button>
+        <Space>
+          Dropdown
+        </Space>
+      </Button>
+    </Dropdown>
+  );
+}
+```
+
+## Resources
+
+- [Ant Design Dropdown](https://ant.design/components/dropdown)

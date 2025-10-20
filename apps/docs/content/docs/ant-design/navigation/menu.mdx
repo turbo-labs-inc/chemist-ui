@@ -1,0 +1,28 @@
+---
+title: Menu
+description: Navigation menu for displaying a list of options.
+---
+
+# Menu
+
+Display navigation menu for selecting from a list of options.
+
+## Basic Usage
+
+```tsx
+import { Menu } from 'antd';
+
+const items = [
+  { key: 'mail', label: 'Navigation One' },
+  { key: 'app', label: 'Navigation Two' },
+  { key: 'settings', label: 'Navigation Three' },
+];
+
+export default function MenuExample() {
+  return <Menu mode="horizontal" items={items} />;
+}
+```
+
+## Resources
+
+- [Ant Design Menu](https://ant.design/components/menu)

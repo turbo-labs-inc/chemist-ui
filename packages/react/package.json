@@ -1,0 +1,55 @@
+{
+  "name": "@chemist-ui/react",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.tsx",
+  "module": "./src/index.tsx",
+  "types": "./src/index.tsx",
+  "exports": {
+    ".": {
+      "types": "./src/index.tsx",
+      "default": "./src/index.tsx"
+    },
+    "./adapters": {
+      "types": "./src/adapters/index.ts",
+      "default": "./src/adapters/index.ts"
+    },
+    "./adapters/ant-design": {
+      "types": "./src/adapters/ant-design.tsx",
+      "default": "./src/adapters/ant-design.tsx"
+    },
+    "./adapters/material-ui": {
+      "types": "./src/adapters/material-ui.tsx",
+      "default": "./src/adapters/material-ui.tsx"
+    },
+    "./adapters/chakra-ui": {
+      "types": "./src/adapters/chakra-ui.tsx",
+      "default": "./src/adapters/chakra-ui.tsx"
+    },
+    "./adapters/shadcn": {
+      "types": "./src/adapters/shadcn.tsx",
+      "default": "./src/adapters/shadcn.tsx"
+    },
+    "./theme-surface": {
+      "types": "./src/theme-surface.tsx",
+      "default": "./src/theme-surface.tsx"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^2.8.2",
+    "@chemist-ui/core": "workspace:*",
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/material": "^6.1.1",
+    "antd": "^5.22.3",
+    "framer-motion": "^11.11.17"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  }
+}

@@ -1,0 +1,40 @@
+---
+title: Transfer List
+description: Move items between two lists.
+---
+
+# Transfer List
+
+Transfer items between two columns.
+
+## Basic Usage
+
+```tsx
+import { List, ListItem, ListItemText, Button, Grid } from '@mui/material';
+
+export default function TransferListExample() {
+  return (
+    <Grid container spacing={2} justifyContent="center" alignItems="center">
+      <Grid item>
+        <List>
+          <ListItem><ListItemText primary="Item 1" /></ListItem>
+          <ListItem><ListItemText primary="Item 2" /></ListItem>
+        </List>
+      </Grid>
+      <Grid item>
+        <Button variant="outlined">→</Button>
+        <Button variant="outlined">←</Button>
+      </Grid>
+      <Grid item>
+        <List>
+          <ListItem><ListItemText primary="Item 3" /></ListItem>
+        </List>
+      </Grid>
+    </Grid>
+  );
+}
+```
+
+## Resources
+
+- [MUI Transfer List](https://mui.com/material-ui/react-transfer-list/)

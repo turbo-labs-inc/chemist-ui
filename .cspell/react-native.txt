@@ -1,0 +1,4 @@
+androidcolor
+jsxs
+Pressability
+pressable

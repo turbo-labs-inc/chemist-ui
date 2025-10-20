@@ -1,0 +1,31 @@
+@import 'tailwindcss';
+@import 'fumadocs-ui/css/neutral.css';
+@import 'fumadocs-ui/css/preset.css';
+
+:root {
+  --color-fd-primary: #f3a53c;
+  --color-fd-primary-foreground: #241c33;
+  --color-fd-secondary: #ffdfb3;
+  --color-fd-secondary-foreground: #241c33;
+  --color-fd-accent: #fff4de;
+  --color-fd-accent-foreground: #2d2740;
+  --color-fd-ring: var(--color-fd-primary);
+  --chemist-logo-iso-start: #f7c77b;
+  --chemist-logo-iso-end: #f19a2c;
+  --chemist-logo-wordmark-start: #f6b15b;
+  --chemist-logo-wordmark-end: #f09819;
+}
+
+.dark {
+  --color-fd-primary: #f7b452;
+  --color-fd-primary-foreground: #110d1f;
+  --color-fd-secondary: #f4c888;
+  --color-fd-secondary-foreground: #110d1f;
+  --color-fd-accent: #f6dca5;
+  --color-fd-accent-foreground: #110d1f;
+  --color-fd-ring: var(--color-fd-primary);
+  --chemist-logo-iso-start: #f3904f;
+  --chemist-logo-iso-end: #3b4371;
+  --chemist-logo-wordmark-start: #ff512f;
+  --chemist-logo-wordmark-end: #d14d64;
+}

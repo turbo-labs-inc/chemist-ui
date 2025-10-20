@@ -1,0 +1,29 @@
+---
+title: List
+description: Display a list of structured data.
+---
+
+# List
+
+List component for displaying data.
+
+## Basic Usage
+
+```tsx
+import { List } from 'antd';
+
+const data = ['Item 1', 'Item 2', 'Item 3'];
+
+export default function ListExample() {
+  return (
+    <List
+      dataSource={data}
+      renderItem={(item) => <List.Item>{item}</List.Item>}
+    />
+  );
+}
+```
+
+## Resources
+
+- [Ant Design List](https://ant.design/components/list)

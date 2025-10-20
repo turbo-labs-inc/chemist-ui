@@ -1,0 +1,29 @@
+---
+title: Avatar
+description: Display user profile pictures or icons.
+---
+
+# Avatar
+
+Avatar component for displaying user images or icons.
+
+## Basic Usage
+
+```tsx
+import { Avatar } from 'antd';
+import { UserOutlined } from '@ant-design/icons';
+
+export default function AvatarExample() {
+  return (
+    <>
+      <Avatar icon={<UserOutlined />} />
+      <Avatar>U</Avatar>
+      <Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=1" />
+    </>
+  );
+}
+```
+
+## Resources
+
+- [Ant Design Avatar](https://ant.design/components/avatar)

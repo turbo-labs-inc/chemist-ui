@@ -1,0 +1,32 @@
+---
+title: TreeSelect
+description: Select values from a tree structure.
+---
+
+# TreeSelect
+
+Tree selection component for hierarchical data.
+
+## Basic Usage
+
+```tsx
+import { TreeSelect } from 'antd';
+
+const treeData = [
+  {
+    title: 'Node1',
+    value: '0-0',
+    children: [
+      { title: 'Child Node1', value: '0-0-1' },
+    ],
+  },
+];
+
+export default function TreeSelectExample() {
+  return <TreeSelect treeData={treeData} placeholder="Select" />;
+}
+```
+
+## Resources
+
+- [Ant Design TreeSelect](https://ant.design/components/tree-select)

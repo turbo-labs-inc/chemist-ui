@@ -1,0 +1,33 @@
+---
+title: Tree
+description: Display hierarchical data in a tree structure.
+---
+
+# Tree
+
+Display data in a hierarchical tree structure.
+
+## Basic Usage
+
+```tsx
+import { Tree } from 'antd';
+
+const treeData = [
+  {
+    title: 'parent 1',
+    key: '0-0',
+    children: [
+      { title: 'leaf', key: '0-0-0' },
+      { title: 'leaf', key: '0-0-1' },
+    ],
+  },
+];
+
+export default function TreeExample() {
+  return <Tree treeData={treeData} />;
+}
+```
+
+## Resources
+
+- [Ant Design Tree](https://ant.design/components/tree)

@@ -1,0 +1,36 @@
+---
+title: Notification
+description: Display notification messages at the corner of the page.
+---
+
+# Notification
+
+Global notification box at corner.
+
+## Basic Usage
+
+```tsx
+import { Button, notification } from 'antd';
+
+export default function NotificationExample() {
+  const [api, contextHolder] = notification.useNotification();
+
+  const openNotification = () => {
+    api.info({
+      message: 'Notification Title',
+      description: 'This is the content of the notification.',
+    });
+  };
+
+  return (
+    <>
+      {contextHolder}
+      <Button onClick={openNotification}>Open Notification</Button>
+    </>
+  );
+}
+```
+
+## Resources
+
+- [Ant Design Notification](https://ant.design/components/notification)

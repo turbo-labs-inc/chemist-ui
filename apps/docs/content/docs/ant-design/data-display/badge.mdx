@@ -1,0 +1,31 @@
+---
+title: Badge
+description: Small numerical indicator for counts and status.
+---
+
+# Badge
+
+Display a count or status indicator.
+
+## Basic Usage
+
+```tsx
+import { Badge, Avatar } from 'antd';
+
+export default function BadgeExample() {
+  return (
+    <>
+      <Badge count={5}>
+        <Avatar shape="square" size="large" />
+      </Badge>
+      <Badge dot>
+        <Avatar shape="square" size="large" />
+      </Badge>
+    </>
+  );
+}
+```
+
+## Resources
+
+- [Ant Design Badge](https://ant.design/components/badge)

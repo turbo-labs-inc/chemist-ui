@@ -1,0 +1,39 @@
+---
+title: Tour
+description: Guided tours and product introductions.
+---
+
+# Tour
+
+Create guided tours for user onboarding.
+
+## Basic Usage
+
+```tsx
+import { Tour, Button } from 'antd';
+import { useState, useRef } from 'react';
+
+export default function TourExample() {
+  const [open, setOpen] = useState(false);
+  const ref = useRef(null);
+
+  const steps = [
+    {
+      title: 'Center',
+      description: 'Displayed in the center of screen.',
+      target: null,
+    },
+  ];
+
+  return (
+    <>
+      <Button onClick={() => setOpen(true)}>Begin Tour</Button>
+      <Tour open={open} onClose={() => setOpen(false)} steps={steps} />
+    </>
+  );
+}
+```
+
+## Resources
+
+- [Ant Design Tour](https://ant.design/components/tour)

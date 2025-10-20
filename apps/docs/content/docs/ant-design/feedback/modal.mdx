@@ -1,0 +1,37 @@
+---
+title: Modal
+description: Modal dialog for important content or actions.
+---
+
+# Modal
+
+Modal dialog overlays.
+
+## Basic Usage
+
+```tsx
+import { Modal, Button } from 'antd';
+import { useState } from 'react';
+
+export default function ModalExample() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <>
+      <Button onClick={() => setOpen(true)}>Open Modal</Button>
+      <Modal
+        title="Modal Title"
+        open={open}
+        onOk={() => setOpen(false)}
+        onCancel={() => setOpen(false)}
+      >
+        <p>Modal content</p>
+      </Modal>
+    </>
+  );
+}
+```
+
+## Resources
+
+- [Ant Design Modal](https://ant.design/components/modal)

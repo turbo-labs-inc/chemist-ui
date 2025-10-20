@@ -1,0 +1,29 @@
+---
+title: Progress
+description: Display progress of an operation.
+---
+
+# Progress
+
+Progress indicator for operations.
+
+## Basic Usage
+
+```tsx
+import { Progress } from 'antd';
+
+export default function ProgressExample() {
+  return (
+    <>
+      <Progress percent={30} />
+      <Progress percent={50} status="active" />
+      <Progress percent={70} status="exception" />
+      <Progress percent={100} />
+    </>
+  );
+}
+```
+
+## Resources
+
+- [Ant Design Progress](https://ant.design/components/progress)

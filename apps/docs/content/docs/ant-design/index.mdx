@@ -1,0 +1,120 @@
+---
+title: Ant Design Components
+description: Enterprise-class UI design system with 70+ components for building rich web applications
+---
+
+# Ant Design Components
+
+Ant Design is an enterprise-class UI design system built for web applications. Chemist UI provides seamless theming integration for all Ant Design components.
+
+## Component Categories
+
+### General
+Core interactive and display components for everyday use.
+- [Button](/docs/ant-design/general/button)
+- [Icon](/docs/ant-design/general/icon)
+- [Typography](/docs/ant-design/general/typography)
+
+### Layout
+Components for structuring page layouts and spacing.
+- [Divider](/docs/ant-design/layout/divider)
+- [Grid](/docs/ant-design/layout/grid)
+- [Layout](/docs/ant-design/layout/layout)
+- [Space](/docs/ant-design/layout/space)
+- [Splitter](/docs/ant-design/layout/splitter)
+
+### Navigation
+Components for guiding users through the application.
+- [Affix](/docs/ant-design/navigation/affix)
+- [Breadcrumb](/docs/ant-design/navigation/breadcrumb)
+- [Dropdown](/docs/ant-design/navigation/dropdown)
+- [Menu](/docs/ant-design/navigation/menu)
+- [Pagination](/docs/ant-design/navigation/pagination)
+- [Steps](/docs/ant-design/navigation/steps)
+
+### Data Entry
+Form controls and input components for collecting user data.
+- [AutoComplete](/docs/ant-design/data-entry/autocomplete)
+- [Cascader](/docs/ant-design/data-entry/cascader)
+- [Checkbox](/docs/ant-design/data-entry/checkbox)
+- [ColorPicker](/docs/ant-design/data-entry/colorpicker)
+- [DatePicker](/docs/ant-design/data-entry/datepicker)
+- [Form](/docs/ant-design/data-entry/form)
+- [Input](/docs/ant-design/data-entry/input)
+- [InputNumber](/docs/ant-design/data-entry/inputnumber)
+- [Mentions](/docs/ant-design/data-entry/mentions)
+- [Radio](/docs/ant-design/data-entry/radio)
+- [Rate](/docs/ant-design/data-entry/rate)
+- [Select](/docs/ant-design/data-entry/select)
+- [Slider](/docs/ant-design/data-entry/slider)
+- [Switch](/docs/ant-design/data-entry/switch)
+- [TimePicker](/docs/ant-design/data-entry/timepicker)
+- [Transfer](/docs/ant-design/data-entry/transfer)
+- [TreeSelect](/docs/ant-design/data-entry/treeselect)
+- [Upload](/docs/ant-design/data-entry/upload)
+
+### Data Display
+Components for presenting and organizing information.
+- [Avatar](/docs/ant-design/data-display/avatar)
+- [Badge](/docs/ant-design/data-display/badge)
+- [Calendar](/docs/ant-design/data-display/calendar)
+- [Card](/docs/ant-design/data-display/card)
+- [Carousel](/docs/ant-design/data-display/carousel)
+- [Collapse](/docs/ant-design/data-display/collapse)
+- [Descriptions](/docs/ant-design/data-display/descriptions)
+- [Empty](/docs/ant-design/data-display/empty)
+- [Image](/docs/ant-design/data-display/image)
+- [List](/docs/ant-design/data-display/list)
+- [Popover](/docs/ant-design/data-display/popover)
+- [QRCode](/docs/ant-design/data-display/qrcode)
+- [Segmented](/docs/ant-design/data-display/segmented)
+- [Statistic](/docs/ant-design/data-display/statistic)
+- [Table](/docs/ant-design/data-display/table)
+- [Tabs](/docs/ant-design/data-display/tabs)
+- [Tag](/docs/ant-design/data-display/tag)
+- [Timeline](/docs/ant-design/data-display/timeline)
+- [Tooltip](/docs/ant-design/data-display/tooltip)
+- [Tour](/docs/ant-design/data-display/tour)
+- [Tree](/docs/ant-design/data-display/tree)
+
+### Feedback
+Components for communicating system status and user actions.
+- [Alert](/docs/ant-design/feedback/alert)
+- [Drawer](/docs/ant-design/feedback/drawer)
+- [Message](/docs/ant-design/feedback/message)
+- [Modal](/docs/ant-design/feedback/modal)
+- [Notification](/docs/ant-design/feedback/notification)
+- [Popconfirm](/docs/ant-design/feedback/popconfirm)
+- [Progress](/docs/ant-design/feedback/progress)
+- [Result](/docs/ant-design/feedback/result)
+- [Skeleton](/docs/ant-design/feedback/skeleton)
+- [Spin](/docs/ant-design/feedback/spin)
+- [Watermark](/docs/ant-design/feedback/watermark)
+
+### Other
+Utility and configuration components.
+- [Anchor](/docs/ant-design/other/anchor)
+- [App](/docs/ant-design/other/app)
+- [ConfigProvider](/docs/ant-design/other/configprovider)
+- [FloatButton](/docs/ant-design/other/floatbutton)
+- [Flex](/docs/ant-design/other/flex)
+
+## Installation
+
+```bash
+pnpm add @chemist-ui/core @chemist-ui/react antd
+```
+
+## Usage
+
+```tsx
+import { ChemistProvider, antDesignTheme } from '@chemist-ui/react';
+
+function App() {
+  return (
+    <ChemistProvider designSystem="ant-design" theme={antDesignTheme}>
+      {/* Your Ant Design components */}
+    </ChemistProvider>
+  );
+}
+```

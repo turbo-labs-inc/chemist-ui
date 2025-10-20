@@ -1,0 +1,36 @@
+---
+title: Transfer
+description: Transfer items between two columns.
+---
+
+# Transfer
+
+Double column transfer component for moving items between lists.
+
+## Basic Usage
+
+```tsx
+import { Transfer } from 'antd';
+import { useState } from 'react';
+
+const mockData = Array.from({ length: 20 }).map((_, i) => ({
+  key: i.toString(),
+  title: `Item ${i + 1}`,
+}));
+
+export default function TransferExample() {
+  const [targetKeys, setTargetKeys] = useState([]);
+  return (
+    <Transfer
+      dataSource={mockData}
+      targetKeys={targetKeys}
+      onChange={setTargetKeys}
+      render={(item) => item.title}
+    />
+  );
+}
+```
+
+## Resources
+
+- [Ant Design Transfer](https://ant.design/components/transfer)

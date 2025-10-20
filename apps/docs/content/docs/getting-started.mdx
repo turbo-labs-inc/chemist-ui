@@ -1,0 +1,75 @@
+---
+title: Getting Started
+description: Set up Chemist UI packages in a React project and load a design system theme.
+---
+
+import { Callout } from 'fumadocs-ui/components/callout';
+
+# Getting Started
+
+Chemist UI ships as an open-core monorepo. Each package focuses on a single concern: core design tokens, framework bindings, and design-system adapters. Follow the steps below to load Chemist inside a React project.
+
+## 1. Install workspace packages
+
+We publish to npm and recommend pnpm for workspace-aware installs:
+
+```bash
+pnpm add @chemist-ui/core @chemist-ui/react antd
+```
+
+> Swap Ant Design for `@mui/material`, `@chakra-ui/react`, or any other supported runtime depending on the adapter you plan to ship.
+
+Chemist exports every adapter and theme directly from `@chemist-ui/react`, so you can import the tokens you need without juggling extra workspace packages.
+
+## 2. Wire the provider
+
+Chemist exposes a provider that injects tokens and metadata into the component tree. Wrap your app layout to make them available everywhere.
+
+```tsx filename="app/layout.tsx"
+import { ChemistProvider, antDesignTheme } from '@chemist-ui/react';
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <ChemistProvider designSystem="ant-design" theme={antDesignTheme}>
+      {children}
+    </ChemistProvider>
+  );
+}
+```
+
+> Themes expose runtime-safe metadata — including brand colors, typography scales, and radius tokens — so your own components can stay in sync with Chemist primitives.
+
+## 3. Copy a component
+
+Paste any example from the docs into your project. Each snippet maps to the published package entry points.
+
+```tsx filename="app/page.tsx"
+import { Button } from '@chemist-ui/react/button';
+
+export default function DashboardCTA() {
+  return <Button variant="primary">Launch sequence</Button>;
+}
+```
+
+<Callout type="info" title="Component timeline">
+Black Ranger is actively finalizing the launch-day catalog (Button, Card, Input, Navigation primitives). Preview builds go up weekly — follow the {" "}
+<a href="/docs/roadmap">roadmap</a> for drops.
+</Callout>
+
+## 4. Switch design systems
+
+Swap adapters without altering application logic. The provider rehydrates tokens instantly.
+
+```tsx filename="app/layout.tsx"
+import { ChemistProvider, shadcnTheme } from '@chemist-ui/react';
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <ChemistProvider designSystem="shadcn" theme={shadcnTheme}>
+      {children}
+    </ChemistProvider>
+  );
+}
+```
+
+Need more? Drop into the [Ranger plan](https://github.com/chemist-ui/chemist-ui/blob/main/RANGER_PLAN.md) to see what’s in flight or propose a track.

@@ -1,0 +1,69 @@
+---
+title: Typography
+description: Basic text writing components including headings, paragraphs, and text formatting.
+---
+
+# Typography
+
+Typography component provides standardized text styles and formatting.
+
+## Overview
+
+The Typography component includes Title, Paragraph, Text, and Link subcomponents for different text hierarchies and purposes.
+
+## Installation
+
+```bash
+pnpm add @chemist-ui/core @chemist-ui/react antd
+```
+
+## Basic Usage
+
+```tsx
+import { Typography } from 'antd';
+
+const { Title, Paragraph, Text, Link } = Typography;
+
+export default function TypographyExample() {
+  return (
+    <>
+      <Title>h1. Ant Design</Title>
+      <Title level={2}>h2. Ant Design</Title>
+      <Paragraph>
+        Ant Design is a design language for background applications.
+      </Paragraph>
+      <Text>Ant Design (default)</Text>
+      <Text type="secondary">Ant Design (secondary)</Text>
+      <Text type="success">Ant Design (success)</Text>
+      <Link href="https://ant.design" target="_blank">
+        Ant Design (Link)
+      </Link>
+    </>
+  );
+}
+```
+
+## Theming with Chemist
+
+Typography colors and styles adapt to your Chemist theme:
+
+```tsx
+import { ChemistProvider, antDesignTheme } from '@chemist-ui/react';
+import { Typography } from 'antd';
+
+export default function ThemedTypography() {
+  return (
+    <ChemistProvider designSystem="ant-design" theme={antDesignTheme}>
+      <Typography.Title>Branded Typography</Typography.Title>
+    </ChemistProvider>
+  );
+}
+```
+
+## API Reference
+
+See [Ant Design Typography Docs](https://ant.design/components/typography) for full API.
+
+## Resources
+
+- [Ant Design Typography](https://ant.design/components/typography)

@@ -1,0 +1,36 @@
+---
+title: Layout
+description: Handling the overall layout of a page with Header, Content, Footer, and Sider components.
+---
+
+# Layout
+
+Classic layout components for structuring your application's page layout.
+
+## Installation
+
+```bash
+pnpm add @chemist-ui/core @chemist-ui/react antd
+```
+
+## Basic Usage
+
+```tsx
+import { Layout } from 'antd';
+
+const { Header, Content, Footer, Sider } = Layout;
+
+export default function LayoutExample() {
+  return (
+    <Layout>
+      <Header>Header</Header>
+      <Content>Content</Content>
+      <Footer>Footer</Footer>
+    </Layout>
+  );
+}
+```
+
+## Resources
+
+- [Ant Design Layout](https://ant.design/components/layout)

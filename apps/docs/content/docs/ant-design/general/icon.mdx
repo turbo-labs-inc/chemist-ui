@@ -1,0 +1,89 @@
+---
+title: Icon
+description: Semantic vector graphics and icon components for Ant Design applications.
+---
+
+# Icon
+
+Icon components provide semantic vector graphics for your application.
+
+## Overview
+
+Ant Design uses icon components from `@ant-design/icons` to provide a rich set of high-quality icons for your application.
+
+## Installation
+
+```bash
+pnpm add @chemist-ui/core @chemist-ui/react antd @ant-design/icons
+```
+
+## Basic Usage
+
+```tsx
+import { HomeOutlined, SettingFilled, SmileOutlined } from '@ant-design/icons';
+
+export default function IconExample() {
+  return (
+    <div>
+      <HomeOutlined />
+      <SettingFilled />
+      <SmileOutlined />
+    </div>
+  );
+}
+```
+
+## Variants
+
+Ant Design icons come in three themes:
+- **Outlined**: Default outlined style
+- **Filled**: Solid filled style
+- **TwoTone**: Two-tone color style
+
+```tsx
+import { HeartOutlined, HeartFilled, HeartTwoTone } from '@ant-design/icons';
+
+export default function IconThemes() {
+  return (
+    <>
+      <HeartOutlined />
+      <HeartFilled />
+      <HeartTwoTone twoToneColor="#eb2f96" />
+    </>
+  );
+}
+```
+
+## Theming with Chemist
+
+Icon colors automatically inherit from Chemist UI theme tokens:
+
+```tsx
+import { ChemistProvider, antDesignTheme } from '@chemist-ui/react';
+import { StarFilled } from '@ant-design/icons';
+
+export default function ThemedIcon() {
+  return (
+    <ChemistProvider designSystem="ant-design" theme={antDesignTheme}>
+      <StarFilled style={{ fontSize: '24px' }} />
+    </ChemistProvider>
+  );
+}
+```
+
+## API Reference
+
+### Common Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `style` | `CSSProperties` | - | Inline styles |
+| `className` | `string` | - | CSS class name |
+| `spin` | `boolean` | `false` | Rotate icon with animation |
+| `rotate` | `number` | - | Rotation angle in degrees |
+| `twoToneColor` | `string` | - | Color for two-tone icons |
+
+## Resources
+
+- [Ant Design Icons](https://ant.design/components/icon)
+- [Icon List](https://ant.design/components/icon#list-of-icons)

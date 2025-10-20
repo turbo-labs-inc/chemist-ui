@@ -1,0 +1,30 @@
+---
+title: Popconfirm
+description: Confirmation dialog as a popover.
+---
+
+# Popconfirm
+
+Confirmation popover for actions.
+
+## Basic Usage
+
+```tsx
+import { Popconfirm, Button } from 'antd';
+
+export default function PopconfirmExample() {
+  return (
+    <Popconfirm
+      title="Delete the task"
+      description="Are you sure to delete this task?"
+      onConfirm={() => console.log('Confirmed')}
+    >
+      <Button danger>Delete</Button>
+    </Popconfirm>
+  );
+}
+```
+
+## Resources
+
+- [Ant Design Popconfirm](https://ant.design/components/popconfirm)

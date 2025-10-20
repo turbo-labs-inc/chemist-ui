@@ -1,0 +1,32 @@
+---
+title: Cascader
+description: Cascade selection for hierarchical data.
+---
+
+# Cascader
+
+Select hierarchical options with cascading dropdown menus.
+
+## Basic Usage
+
+```tsx
+import { Cascader } from 'antd';
+
+const options = [
+  {
+    value: 'zhejiang',
+    label: 'Zhejiang',
+    children: [
+      { value: 'hangzhou', label: 'Hangzhou' },
+    ],
+  },
+];
+
+export default function CascaderExample() {
+  return <Cascader options={options} placeholder="Please select" />;
+}
+```
+
+## Resources
+
+- [Ant Design Cascader](https://ant.design/components/cascader)

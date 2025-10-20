@@ -1,0 +1,32 @@
+---
+title: Table
+description: Display rows of data with sorting and filtering.
+---
+
+# Table
+
+Data table component for displaying structured data.
+
+## Basic Usage
+
+```tsx
+import { Table } from 'antd';
+
+const columns = [
+  { title: 'Name', dataIndex: 'name', key: 'name' },
+  { title: 'Age', dataIndex: 'age', key: 'age' },
+];
+
+const data = [
+  { key: '1', name: 'John', age: 32 },
+  { key: '2', name: 'Jane', age: 28 },
+];
+
+export default function TableExample() {
+  return <Table columns={columns} dataSource={data} />;
+}
+```
+
+## Resources
+
+- [Ant Design Table](https://ant.design/components/table)
